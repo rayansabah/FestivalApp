@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Menu from './comp/Menu'
-import Mat from './pages/Mat';
+
+import Scene from './pages/Scene';
+import Location from './pages/Location';
+import Food from './pages/Food';
+import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
     const [component, setComponent] = useState(null)
@@ -11,19 +16,19 @@ function App() {
                 setComponent(<Menu />)
                 break;
             case "/Scene":
-                setComponent(<Mat />)
+                setComponent(<Scene />)
                 break;
-            case "/Omrade":
-                setComponent(<Mat />)
+            case "/Location":
+                setComponent(<Location />)
                 break;
-            case "/Mat":
-                setComponent(<Mat />)
+            case "/Food":
+                setComponent(<Food />)
                 break;
-            case "/Kontakt":
-                setComponent(<Mat />)
+            case "/Contact":
+                setComponent(<Contact />)
                 break;
             case "/About":
-                setComponent(<Mat />)
+                setComponent(<About />)
                 break;
             default:
                 break;
