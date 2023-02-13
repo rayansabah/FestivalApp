@@ -1,14 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
 
+
+
+import Menu from './comp/Menu'
+
+import Mat from './pages/Mat';
+import React,{userState} from 'react';
+
+
+
 function App() {
-  return (
+    
+    let component
+    switch (window.location.pathname) {
+        case "/":
+            component = <Menu/>
+            break;
+        case "/Mat":
+            component = <Mat />
+            break
 
-    <div>
-      
+        default:
+            break;
+    }
 
-    </div>
-  );
+    
+
+
+    return (
+        <>
+           
+           
+            {component}
+
+        </>
+
+
+    );
 }
 
 export default App;
