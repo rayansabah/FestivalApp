@@ -1,41 +1,27 @@
-import './App.css';
-
-
-
+import React, { useState, useEffect } from 'react';
 import Menu from './comp/Menu'
-
 import Mat from './pages/Mat';
-import React,{userState} from 'react';
-
-
 
 function App() {
-    
-    let component
-    switch (window.location.pathname) {
-        case "/":
-            component = <Menu/>
-            break;
-        case "/Mat":
-            component = <Mat />
-            break
+    const [component, setComponent] = useState(null)
 
-        default:
-            break;
-    }
-
-    
-
+    useEffect(() => {
+        switch (window.location.pathname) {
+            case "/":
+                setComponent(<Menu />)
+                break;
+            case "/Mat":
+                setComponent(<Mat />)
+                break;
+            default:
+                break;
+        }
+    }, [window.location.pathname]);
 
     return (
         <>
-           
-           
             {component}
-
         </>
-
-
     );
 }
 
