@@ -1,5 +1,19 @@
-export default function Scene(){
-    return   <h1>s</h1>
+import data from '../posts.json'
 
-
+export default function Scene() {
+    return <div>
+        {data.Scenes.map((scene, index) => (
+            <div key={index}>
+                <h1>{scene.name}</h1>
+                <ul>
+                    {scene.performances.map((performance, index) => (
+                        <li key={index}>
+                            <p>{performance.artist}</p>
+                            <p>{performance.time}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+    </div>
 }

@@ -8,7 +8,7 @@
 }
 
 body{
-    background: linear-gradient(90deg, rgb(0, 153, 255) 0%, rgb(235, 21, 224) 51%, rgb(86, 2, 119) 100%);
+    background: linear-gradient(45deg, rgb(0, 153, 255) 0%, rgb(235, 21, 224) 51%, rgb(86, 2, 119)) fixed;
 }
 
 .menuback {
