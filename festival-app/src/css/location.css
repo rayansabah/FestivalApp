@@ -1,0 +1,9 @@
+.rcorners1 {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: #ffff;
+    padding: 9px; 
+    width: 200px;
+    height: 150px; 
+  }
