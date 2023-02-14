@@ -1,4 +1,4 @@
-import data from '../posts.json'
+import data from '../jsonTemp/scene.json'
 
 export default function Scene() {
     return <div>

@@ -34,6 +34,23 @@
                     "time": "15.00"
                 }
             ]
+        },
+        {
+            "name": "Scen 3",
+            "performances": [
+                {
+                    "artist": "Bengt Göran",
+                    "time": "13.00"
+                },
+                {
+                    "artist": "Ulf Jörgendsson",
+                    "time": "14.00"
+                },
+                {
+                    "artist": "Einar Franksson",
+                    "time": "15.00"
+                }
+            ]
         }
     ]
 }  

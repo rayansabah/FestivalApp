@@ -1,0 +1,25 @@
+{
+    "FoodMenu": [
+        {
+            "name": "Matvagn1",
+            "menu": [
+                "Hamburgare",
+                "Korv"
+            ]
+        },
+        {
+            "name": "Matvagn2",
+            "menu": [
+                "Hamburgare",
+                "Korv"
+            ]
+        },
+        {
+            "name": "Matvagn3",
+            "menu": [
+                "Hamburgare",
+                "Korv"
+            ]
+        }
+    ]
+}
