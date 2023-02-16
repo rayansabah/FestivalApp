@@ -21,7 +21,7 @@ export default function Location() {
             />
             <Marker position={center}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    A pretty CSS3 popu1p. <br /> Easily customizable.
                 </Popup>
             </Marker>
         </MapContainer>
