@@ -11,8 +11,10 @@ export default function Scene() {
     return <div >
 
         <div className="square">
+            <div className='scene-flex'>
             <h2>{scen1.name}</h2>
-            <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s" /> 
+            <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s"  /> 
+            </div>
             <ul>
                 {scen1.performances.map((performance) => (
                     <li key={performance.artist}>
@@ -23,8 +25,10 @@ export default function Scene() {
         </div>
 
         <div className="square">
+        <div className='scene-flex'>
             <h2>{scen2.name}</h2>
             <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />  
+            </div>
             <ul>
                 {scen2.performances.map((performance) => (
                     <li key={performance.artist}>
@@ -35,8 +39,10 @@ export default function Scene() {
         </div>
         
         <div className="square">
+        <div className='scene-flex'>
             <h2>{scen3.name}</h2>
             <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />  
+            </div>
             <ul>
                 {scen3.performances.map((performance) => (
                     <li key={performance.artist}>

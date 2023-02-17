@@ -17,3 +17,8 @@ ul {
     list-style: none;
 }
 
+
+.scene-flex{
+    display: flex;
+    justify-content: space-between;
+}
