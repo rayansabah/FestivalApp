@@ -1,4 +1,4 @@
-.rcorners1 {
+.map-square{
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
@@ -8,3 +8,22 @@
     height: 250px; 
     display: flex;
   }
+
+  .location-square{
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flexbox;
+    padding: 9px;
+    /* adjust this value to change the size of the box */
+    border-radius: 10px;
+    /* adjust this value to change the roundness of the corners */
+    background-color: #ffffff;
+    /* change this value to set the background color of the box */
+    width: 300px;
+    /* height: 150px;  */
+}
+
+.location-header{
+  text-align: center;
+}

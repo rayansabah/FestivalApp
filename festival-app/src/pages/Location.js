@@ -8,7 +8,13 @@ const center = [58.07814215851804, 13.020617914330508]
 
 export default function Location() {
     
-    return <div className='rcorners1'>
+    return <div>
+        <div className='location-square'>
+        <h1 className='location-header'>Område</h1>
+
+                <p>ashfjasjfdkadkasjkd</p>
+        </div>
+        <div className='map-square'>
         <MapContainer style={{ height: '90%', width:'100%'}}
             center={center}
             zoom={13}
@@ -26,6 +32,7 @@ export default function Location() {
             </Marker>
         </MapContainer>
 
+    </div>
     </div>
 
 }
