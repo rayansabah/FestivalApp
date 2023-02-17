@@ -1,5 +1,11 @@
+import '../css/contact.css'
+
 export default function Contact(){
-    return   <h1>k</h1>
+    return   <div className="contact-square">
+        <h1>Kontakta oss</h1>
+
+        <p>ashfjasjfdkadkasjkd</p>
+    </div>
 
 
 }

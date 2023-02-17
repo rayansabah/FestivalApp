@@ -1,4 +1,4 @@
-.scene-square {
+.about-square{
     margin: 1em;
     margin-left: auto;
     margin-right: auto;
@@ -13,16 +13,6 @@
     /* height: 150px;  */
 }
 
-ul {
-    list-style: none;
-}
-
-
-.scene-flex{
-    display: flex;
-    justify-content: space-between;
-}
-
-.scene-Header{
+div h1{
     text-align: center;
 }

@@ -1,5 +1,11 @@
+import '../css/about.css'
+
 export default function About(){
-    return   <h1>ab</h1>
+    return   <div className='about-square'>
+        <h1> Om oss</h1>
+        <p>alfaskfasfmafmasmfakm</p>
+
+    </div>
 
 
 }

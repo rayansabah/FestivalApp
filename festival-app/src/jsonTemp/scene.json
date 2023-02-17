@@ -1,4 +1,12 @@
 {
+    "SceneInfo": [
+        {
+            "name": "Scener",
+            "info": [
+                "ajjkasasjkjasjkasjasjjkasjk"
+            ]
+        }
+    ],
     "Scenes": [
         {
             "name": "Scen 1",
@@ -17,7 +25,6 @@
                 }
             ]
         },
-
         {
             "name": "Scen 2",
             "performances": [
@@ -53,4 +60,4 @@
             ]
         }
     ]
-}  
+}

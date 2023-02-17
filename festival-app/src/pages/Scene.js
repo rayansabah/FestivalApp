@@ -9,8 +9,20 @@ export default function Scene() {
     const scen2 = data.Scenes.find((scene) => scene.name === "Scen 2");
     const scen3 = data.Scenes.find((scene) => scene.name === "Scen 3");
     return <div >
+         <div>
+            {data.SceneInfo.map(scene => (
+                <div className='scene-square'>
+                    <h1 className='scene-Header'>{scene.name}</h1>
+                    <p>
+                        {scene.info.map(item => (
+                            <p>{item}</p>
+                        ))}
+                    </p>
+                </div>
+            ))}
+        </div>
 
-        <div className="square">
+        <div className="scene-square">
             <div className='scene-flex'>
             <h2>{scen1.name}</h2>
             <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s"  /> 
@@ -24,7 +36,7 @@ export default function Scene() {
             </ul>
         </div>
 
-        <div className="square">
+        <div className="scene-square">
         <div className='scene-flex'>
             <h2>{scen2.name}</h2>
             <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />  
@@ -38,7 +50,7 @@ export default function Scene() {
             </ul>
         </div>
         
-        <div className="square">
+        <div className="scene-square">
         <div className='scene-flex'>
             <h2>{scen3.name}</h2>
             <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />  

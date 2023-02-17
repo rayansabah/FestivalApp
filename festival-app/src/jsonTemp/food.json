@@ -1,5 +1,16 @@
 {
+    "FoodInfo":[
+         {
+            "name": "Mat",
+            "info": [
+                "fajfajsfaj jfnajfnajksfnaks knasflsnfasnfalsk"
+               
+            ]
+        }
+
+    ],
     "FoodMenu": [
+       
         {
             "name": "Matvagn1",
             "menu": [
