@@ -1,0 +1,15 @@
+.text-menu{
+ text-decoration: none;
+ color: black;
+
+ font-size: 30px;
+ font-weight: 600;
+
+
+}
+
+.menu li{
+    margin: 30px;
+
+    text-align: center;
+}
