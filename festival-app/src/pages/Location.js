@@ -2,6 +2,7 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import '../css/location.css'
+import Navbar from '../comp/NavBar'
 
 const center = [58.07814215851804, 13.020617914330508]
 
@@ -9,6 +10,7 @@ const center = [58.07814215851804, 13.020617914330508]
 export default function Location() {
     
     return <div>
+        <Navbar/>
         <div className='location-square'>
         <h1 className='location-header'>Område</h1>
 

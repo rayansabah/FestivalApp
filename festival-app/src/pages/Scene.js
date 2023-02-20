@@ -1,6 +1,7 @@
 import data from '../jsonTemp/scene.json'
 import Img from '../comp/ImgPopup'
 import '../css/scene.css'
+import Navbar from '../comp/NavBar';
 
 
 
@@ -9,6 +10,7 @@ export default function Scene() {
     const scen2 = data.Scenes.find((scene) => scene.name === "Scen 2");
     const scen3 = data.Scenes.find((scene) => scene.name === "Scen 3");
     return <div >
+        <Navbar/>
          <div>
             {data.SceneInfo.map(scene => (
                 <div className='scene-square'>

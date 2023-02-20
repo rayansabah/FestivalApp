@@ -1,9 +1,10 @@
 import food from '../jsonTemp/food.json'
 import '../css/food.css'
+import Navbar from '../comp/NavBar'
 
 export default function Food() {
     return <div>
-
+            <Navbar/>
         <div>
             {food.FoodInfo.map(food => (
                 <div className='food-square'>
