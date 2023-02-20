@@ -9,7 +9,7 @@ function StartMenu() {
 
     <div className='menu'>
 
-      <ul>
+      
         <li>
           <a href="/" className="logo" >  <img src={logo} alt="logo" width={270} /></a>
         </li>
@@ -26,9 +26,9 @@ function StartMenu() {
           <Link className='text-menu' to="/Contact">Kontakta oss</Link>
         </li>
         <li>
-          <Link className='text-menu' to="/About">about</Link>
+          <Link className='text-menu' to="/About">Om oss</Link>
         </li>
-      </ul>
+        
     </div>
 
   );
