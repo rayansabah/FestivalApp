@@ -12,15 +12,15 @@
             "name": "Scen 1",
             "performances": [
                 {
-                    "artist": "Bengt Göran",
+                    "artist": "Aeho",
                     "time": "13.00"
                 },
                 {
-                    "artist": "Ulf Jörgendsson",
+                    "artist": "Fredd",
                     "time": "14.00"
                 },
                 {
-                    "artist": "Einar Franksson",
+                    "artist": "Gunna",
                     "time": "15.00"
                 }
             ]
@@ -46,11 +46,11 @@
             "name": "Scen 3",
             "performances": [
                 {
-                    "artist": "Bengt Göran",
+                    "artist": "Ölf",
                     "time": "13.00"
                 },
                 {
-                    "artist": "Ulf Jörgendsson",
+                    "artist": "Gand",
                     "time": "14.00"
                 },
                 {
