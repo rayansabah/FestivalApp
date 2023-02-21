@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import '../css/imgPopup.css'
+import '../css/Popuptext.css'
 
 import { BsBookmarkStar } from 'react-icons/bs';
+import { FiX } from 'react-icons/fi';
 
 
 
@@ -18,15 +19,15 @@ function Popuptext( { src }) {
 
   return (
     <>
-      <button className="image-popup-button" onClick={handleButtonClick}>
-      <BsBookmarkStar size={24}/>
+      <button className="text-popup-button" onClick={handleButtonClick}>
+      <BsBookmarkStar size={22}/>
       </button>
       {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
+        <div className="text-popup">
+          <div className="text-popup-content">
             {src}
-            <button className="close-button" onClick={handlePopupClose}>
-              ha ett X här
+            <button className="text-close-button" onClick={handlePopupClose}>
+              <FiX size={22}/>
             </button>
           </div>
         </div>

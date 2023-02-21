@@ -45,20 +45,22 @@ export default function Scene() {
         <div >
             {data.SceneInfo.map(scene => (
                 <div className='scene-square'>
-                    
-                    <h1 className='scene-Header'  >{scene.name} </h1>
-                    <div className='bookmark-star' >
-                    <Popuptext src={<div>
-                        <h2>Favorites</h2>
-                        
-                            {favorites.map((favorite, index) => (
-                                <li key={index}>
-                                    {favorite.artist} - {favorite.time}
-                                </li>
-                            ))}
-                        
-                        
-                    </div>}  /> </div>
+                    <div className="scene-header-container">
+                        <div className="header-text-container">
+                            <h1 className="scene-header">{scene.name}</h1>
+                        </div>
+                        <div className="popuptext-container">
+                            <Popuptext src={<div>
+                                <h2>Favoriter:</h2>
+                                {favorites.map((favorite, index) => (
+                                    <li key={index}>
+                                        {favorite.artist} - {favorite.time}
+                                    </li>
+                                ))}
+                            </div>} />
+                        </div>
+                    </div>
+
                     <p>
                         {scene.info.map(item => (
                             <p>{item}</p>
@@ -78,11 +80,11 @@ export default function Scene() {
 
             {scen1.performances.map((performance) => (
                 <div className='text-artist'>
-                     <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
                         {performance.artist} - {performance.time}
 
-                        {isFavorite(performance.artist, performance.time) ? (
+                        {isFavorite(performance.artist, performance.time, scen1.name) ? (
                             <FaStar
                                 onClick={() =>
                                     handleRemoveFavorite(performance.artist, performance.time)
@@ -114,7 +116,7 @@ export default function Scene() {
 
             {scen2.performances.map((performance) => (
                 <div className='text-artist'>
-                   <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
                         {performance.artist} - {performance.time}
 
@@ -142,9 +144,9 @@ export default function Scene() {
                 <h2>{scen3.name}</h2>
                 <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />
             </div>
-            
-                {scen3.performances.map((performance) => (
-                    <div className='text-artist'>
+
+            {scen3.performances.map((performance) => (
+                <div className='text-artist'>
                     <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
                         {performance.artist} - {performance.time}
@@ -162,9 +164,9 @@ export default function Scene() {
                             )}
                         </div>
                     </li>
-                    </div>
-                ))}
-            
+                </div>
+            ))}
+
 
 
 

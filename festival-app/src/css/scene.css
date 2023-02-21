@@ -23,12 +23,35 @@ li {
     justify-content: space-between;
 }
 
-.scene-Header {
-    text-align: center;
-    justify-self: unset;
-    background-color: bisque;
-   
-}
+.scene-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-text-container {
+    position: relative; /* Set the container to relative positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scene-header {
+    margin-right: 20px; /* Add space to the right of the header */
+  }
+  
+  .popuptext-container {
+    position: absolute; /* Set the container to absolute positioning */
+     /* Position the container below the header */
+    margin-top: 0.8em;
+    margin-bottom: auto;
+    margin-left: 15em;
+    margin-right: auto; /* Position the container to the right of the header */
+    display: flex;
+    align-items: center;
+    /* Set the height of the container */
+  }
+  
 
 .text-artist {
     border-radius: 15px;

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FiX } from 'react-icons/fi';
 import '../css/imgPopup.css'
 
 
@@ -26,7 +27,7 @@ function ImgPopup( { src }) {
           <div className="popup-content">
             <img src={ src } width={500} height={400} alt="Popup Image" />
             <button className="close-button" onClick={handlePopupClose}>
-              ha ett X här
+            <FiX size={22}/>
             </button>
           </div>
         </div>
