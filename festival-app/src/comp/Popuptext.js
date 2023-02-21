@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../css/imgPopup.css'
 
-import Star from './StarIcon.svg'
+import { BsBookmarkStar } from 'react-icons/bs';
 
 
 
@@ -19,7 +19,7 @@ function Popuptext( { src }) {
   return (
     <>
       <button className="image-popup-button" onClick={handleButtonClick}>
-      <img src={Star} alt="img" />
+      <BsBookmarkStar size={24}/>
       </button>
       {showPopup && (
         <div className="popup">

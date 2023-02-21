@@ -18,21 +18,40 @@ li {
 }
 
 
-.scene-flex{
+.scene-flex {
     display: flex;
     justify-content: space-between;
 }
 
-.scene-Header{
+.scene-Header {
     text-align: center;
+    justify-self: unset;
+    background-color: bisque;
+   
 }
-.text-artist{
-border-radius: 15px;
-background: #e9e9e9;
-width: auto;
-margin-bottom: 2px;
-margin: 0,5em;
-padding: 0.3em;
+
+.text-artist {
+    border-radius: 15px;
+    background: #e9e9e9;
+    width: auto;
+    margin-bottom: 2px;
+    margin: 0, 5em;
+    padding: 0.3em;
 
 
 }
+
+.bookmark-star {
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    background-color: aqua;
+}
+
+
+.favorite-icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
