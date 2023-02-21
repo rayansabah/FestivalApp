@@ -68,41 +68,47 @@ export default function Scene() {
                 <h2>{scen1.name}</h2>
                 <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s" />
             </div>
-            <ul>
+
+            
+
                 {scen1.performances.map((performance) => (
-                    <li key={performance.artist}>
+                    <div className='text-artist'>
+                        <li key={performance.artist}>
 
-                        {performance.artist} - {performance.time}
+                            {performance.artist} - {performance.time}
 
-                        {isFavorite(performance.artist, performance.time) ? (
-                            <button
-                                onClick={() =>
-                                    handleRemoveFavorite(performance.artist, performance.time)
-                                }
-                            >
-                                Remove Favorite
-                            </button>
-                        ) : (
-                            <button
-                                onClick={() =>
-                                    handleAddFavorite(performance.artist, performance.time)
-                                }
-                            >
-                                Add Favorite
-                            </button>
-                        )}
-                    </li>
+                            {isFavorite(performance.artist, performance.time) ? (
+                                <button
+                                    onClick={() =>
+                                        handleRemoveFavorite(performance.artist, performance.time)
+                                    }
+                                >
+                                    Remove Favorite
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={() =>
+                                        handleAddFavorite(performance.artist, performance.time)
+                                    }
+                                >
+                                    Favorite
+                                </button>
+                            )}
+                        </li>
+                    </div>
                 ))}
-            </ul>
+            
+
         </div>
-        
+
         <div className="scene-square">
             <div className='scene-flex'>
                 <h2>{scen2.name}</h2>
                 <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />
             </div>
-            <ul>
+            
                 {scen2.performances.map((performance) => (
+                    <div className='text-artist'>
                     <li key={performance.artist}>
 
                         {performance.artist} - {performance.time}
@@ -125,8 +131,9 @@ export default function Scene() {
                             </button>
                         )}
                     </li>
+                    </div>
                 ))}
-            </ul>
+            
         </div>
 
         <div className="scene-square">
@@ -134,8 +141,9 @@ export default function Scene() {
                 <h2>{scen3.name}</h2>
                 <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />
             </div>
-            <ul>
+            
                 {scen3.performances.map((performance) => (
+                    <div className='text-artist'>
                     <li key={performance.artist}>
 
                         {performance.artist} - {performance.time}
@@ -158,8 +166,9 @@ export default function Scene() {
                             </button>
                         )}
                     </li>
+                    </div>
                 ))}
-            </ul>
+            
         </div>
 
         {/* {data.Scenes.map((scene, index) => (

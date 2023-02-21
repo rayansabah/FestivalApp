@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../css/imgPopup.css'
 
-import Star from './Group.svg'
+import Star from './StarIcon.svg'
 
 
 
