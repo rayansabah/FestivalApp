@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { FaStar, FaRegStar } from 'react-icons/fa';
+
 
 import data from '../jsonTemp/scene.json'
 import Img from '../comp/ImgPopup'
 import '../css/scene.css'
 import Navbar from '../comp/NavBar';
 
-import Popup from '../comp/Popuptext.js'
+
 import Popuptext from '../comp/Popuptext.js';
 
 
@@ -40,20 +42,23 @@ export default function Scene() {
 
     return <div >
         <Navbar />
-        <div>
+        <div >
             {data.SceneInfo.map(scene => (
                 <div className='scene-square'>
-                    <h1 className='scene-Header'>{scene.name} </h1>
+                    
+                    <h1 className='scene-Header'  >{scene.name} </h1>
+                    <div className='bookmark-star' >
                     <Popuptext src={<div>
                         <h2>Favorites</h2>
-                        <ul>
+                        
                             {favorites.map((favorite, index) => (
                                 <li key={index}>
                                     {favorite.artist} - {favorite.time}
                                 </li>
                             ))}
-                        </ul>
-                    </div>} />
+                        
+                        
+                    </div>}  /> </div>
                     <p>
                         {scene.info.map(item => (
                             <p>{item}</p>
@@ -69,35 +74,35 @@ export default function Scene() {
                 <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s" />
             </div>
 
-            
 
-                {scen1.performances.map((performance) => (
-                    <div className='text-artist'>
-                        <li key={performance.artist}>
 
-                            {performance.artist} - {performance.time}
+            {scen1.performances.map((performance) => (
+                <div className='text-artist'>
+                     <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
-                            {isFavorite(performance.artist, performance.time) ? (
-                                <button
-                                    onClick={() =>
-                                        handleRemoveFavorite(performance.artist, performance.time)
-                                    }
-                                >
-                                    Remove Favorite
-                                </button>
-                            ) : (
-                                <button
-                                    onClick={() =>
-                                        handleAddFavorite(performance.artist, performance.time)
-                                    }
-                                >
-                                    Favorite
-                                </button>
-                            )}
-                        </li>
-                    </div>
-                ))}
-            
+                        {performance.artist} - {performance.time}
+
+                        {isFavorite(performance.artist, performance.time) ? (
+                            <FaStar
+                                onClick={() =>
+                                    handleRemoveFavorite(performance.artist, performance.time)
+                                }
+                            >
+
+                            </FaStar>
+                        ) : (
+                            <FaRegStar
+                                onClick={() =>
+                                    handleAddFavorite(performance.artist, performance.time)
+                                }
+                            >
+
+                            </FaRegStar>
+                        )}
+                    </li>
+                </div>
+            ))}
+
 
         </div>
 
@@ -106,34 +111,30 @@ export default function Scene() {
                 <h2>{scen2.name}</h2>
                 <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPha0tgqovvWrctey5XsWasNB9qNh88cCMLCTBFEnG9w&s" />
             </div>
-            
-                {scen2.performances.map((performance) => (
-                    <div className='text-artist'>
-                    <li key={performance.artist}>
+
+            {scen2.performances.map((performance) => (
+                <div className='text-artist'>
+                   <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
                         {performance.artist} - {performance.time}
 
-                        {isFavorite(performance.artist, performance.time) ? (
-                            <button
-                                onClick={() =>
-                                    handleRemoveFavorite(performance.artist, performance.time)
-                                }
-                            >
-                                Remove Favorite
-                            </button>
-                        ) : (
-                            <button
-                                onClick={() =>
-                                    handleAddFavorite(performance.artist, performance.time)
-                                }
-                            >
-                                Add Favorite
-                            </button>
-                        )}
+                        <div className='favorite-icon-container'>
+                            {isFavorite(performance.artist, performance.time) ? (
+                                <FaStar
+
+                                    onClick={() => handleRemoveFavorite(performance.artist, performance.time)}
+                                />
+                            ) : (
+                                <FaRegStar
+
+                                    onClick={() => handleAddFavorite(performance.artist, performance.time)}
+                                />
+                            )}
+                        </div>
                     </li>
-                    </div>
-                ))}
-            
+                </div>
+            ))}
+
         </div>
 
         <div className="scene-square">
@@ -144,31 +145,29 @@ export default function Scene() {
             
                 {scen3.performances.map((performance) => (
                     <div className='text-artist'>
-                    <li key={performance.artist}>
+                    <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
                         {performance.artist} - {performance.time}
+                        <div className='favorite-icon-container'>
+                            {isFavorite(performance.artist, performance.time) ? (
+                                <FaStar
 
-                        {isFavorite(performance.artist, performance.time) ? (
-                            <button
-                                onClick={() =>
-                                    handleRemoveFavorite(performance.artist, performance.time)
-                                }
-                            >
-                                Remove Favorite
-                            </button>
-                        ) : (
-                            <button
-                                onClick={() =>
-                                    handleAddFavorite(performance.artist, performance.time)
-                                }
-                            >
-                                Add Favorite
-                            </button>
-                        )}
+                                    onClick={() => handleRemoveFavorite(performance.artist, performance.time)}
+                                />
+                            ) : (
+                                <FaRegStar
+
+                                    onClick={() => handleAddFavorite(performance.artist, performance.time)}
+                                />
+                            )}
+                        </div>
                     </li>
                     </div>
                 ))}
             
+
+
+
         </div>
 
         {/* {data.Scenes.map((scene, index) => (
