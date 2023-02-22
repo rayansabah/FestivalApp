@@ -1,88 +1,89 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaStar, FaRegStar } from 'react-icons/fa';
-
-
-import data from '../jsonTemp/scene.json'
-import Img from '../comp/ImgPopup'
-import '../css/scene.css'
+import { useCookies } from 'react-cookie';
+import data from '../jsonTemp/scene.json';
+import Img from '../comp/ImgPopup';
+import '../css/scene.css';
 import Navbar from '../comp/NavBar';
-
-
 import Popuptext from '../comp/Popuptext.js';
 
-
-
 export default function Scene() {
-    const scen1 = data.Scenes.find((scene) => scene.name === "Scen 1");
-    const scen2 = data.Scenes.find((scene) => scene.name === "Scen 2");
-    const scen3 = data.Scenes.find((scene) => scene.name === "Scen 3");
-    const [favorites, setFavorites] = useState([]);
+  const scen1 = data.Scenes.find((scene) => scene.name === 'Scen 1');
+  const scen2 = data.Scenes.find((scene) => scene.name === 'Scen 2');
+  const scen3 = data.Scenes.find((scene) => scene.name === 'Scen 3');
+  const [favorites, setFavorites] = useState([]);
+  const [cookies, setCookie] = useCookies(['favorites']);
 
-    const handleAddFavorite = (artist, time) => {
-        setFavorites((prevFavorites) => [
-            ...prevFavorites,
-            { artist: artist, time: time },
-        ]);
-    };
+  useEffect(() => {
+    const savedFavorites = cookies.favorites || [];
+    setFavorites(savedFavorites);
+  }, [cookies]);
 
-    const handleRemoveFavorite = (artist, time) => {
-        setFavorites((prevFavorites) =>
-            prevFavorites.filter(
-                (favorite) => favorite.artist !== artist || favorite.time !== time
-            )
-        );
-    };
+  const handleAddFavorite = (artist, time) => {
+    const newFavorites = [...favorites, { artist: artist, time: time }];
+    setFavorites(newFavorites);
+    setCookie('favorites', newFavorites);
+  };
 
-    const isFavorite = (artist, time) => {
-        return favorites.some(
-            (favorite) => favorite.artist === artist && favorite.time === time
-        );
-    };
+  const handleRemoveFavorite = (artist, time) => {
+    const newFavorites = favorites.filter(
+      (favorite) => favorite.artist !== artist || favorite.time !== time
+    );
+    setFavorites(newFavorites);
+    setCookie('favorites', newFavorites);
+  };
 
+  const isFavorite = (artist, time) => {
+    return favorites.some(
+      (favorite) => favorite.artist === artist && favorite.time === time
+    );
+  };
 
-    return <div >
-        <Navbar />
-        <div >
-            {data.SceneInfo.map(scene => (
-                <div className='scene-square'>
-                    <div className="scene-header-container">
-                        <div className="header-text-container">
-                            <h1 className="scene-header">{scene.name}</h1>
-                        </div>
-                        <div className="popuptext-container">
-                            <Popuptext src={<div>
-                                <h2>Favoriter:</h2>
-                                {favorites.map((favorite, index) => (
-                                    <li key={index}>
-                                        {favorite.artist} - {favorite.time}
-                                    </li>
-                                ))}
-                            </div>} />
-                        </div>
+  return (
+    <div>
+      <Navbar />
+      <div>
+        {data.SceneInfo.map((scene) => (
+          <div className="scene-square" key={scene.name}>
+            <div className="scene-header-container">
+              <div className="header-text-container">
+                <h1 className="scene-header">{scene.name}</h1>
+              </div>
+              <div className="popuptext-container">
+                <Popuptext
+                  src={
+                    <div>
+                      <h2>Favoriter:</h2>
+                      {favorites.map((favorite, index) => (
+                        <li key={index}>
+                          {favorite.artist} - {favorite.time}
+                        </li>
+                      ))}
                     </div>
-
-                    <p>
-                        {scene.info.map(item => (
-                            <p>{item}</p>
-                        ))}
-                    </p>
-                </div>
-            ))}
-        </div>
-
-        <div className="scene-square">
-            <div className='scene-flex'>
-                <h2>{scen1.name}</h2>
-                <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s" />
+                  }
+                />
+              </div>
             </div>
 
+            <p>
+              {scene.info.map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
+            </p>
+          </div>
+        ))}
+      </div>
 
+      <div className="scene-square">
+        <div className="scene-flex">
+          <h2>{scen1.name}</h2>
+          <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bFnopqoRjdsoRQpSzPixsS2lLVMSsMbxo044VUPQ&s" />
+        </div>
 
-            {scen1.performances.map((performance) => (
-                <div className='text-artist'>
-                    <li key={performance.artist} style={{ display: 'flex', justifyContent: 'space-between' }}>
-
-                        {performance.artist} - {performance.time}
+        {scen1.performances.map((performance) => (
+          <div className="text-artist" key={performance.artist}>
+            <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+              {performance.artist} - {performance.time}
 
                         {isFavorite(performance.artist, performance.time, scen1.name) ? (
                             <FaStar
@@ -191,4 +192,5 @@ export default function Scene() {
             
         ))} */}
     </div>
+  )
 }
