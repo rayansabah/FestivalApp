@@ -6,7 +6,7 @@ import Scene from './pages/Scene';
 import Location from './pages/Location';
 import Food from './pages/Food';
 import Contact from './pages/Contact';
-import About from './pages/About';
+import Sponsor from './pages/Sponsor';
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
         <Route exact path="/">
           <StartMenu />
         </Route>
-        <Route exact path="/about">
-          <About/>
+        <Route exact path="/sponsor">
+          <Sponsor/>
         </Route>
         <Route path="/scene">
           <Scene />
