@@ -14,7 +14,7 @@ function StartMenu() {
           <a href="/" className="logo" >  <img src={logo} alt="logo" width={270} /></a>
         </li>
         <li>
-          <Link className='text-menu' to="/Scene">Scene</Link>
+          <Link className='text-menu' to="/Scene">Scener</Link>
         </li>
         <li>
           <Link className='text-menu' to="/Location">Område</Link>
@@ -26,7 +26,7 @@ function StartMenu() {
           <Link className='text-menu' to="/Contact">Kontakta oss</Link>
         </li>
         <li>
-          <Link className='text-menu' to="/About">Om oss</Link>
+          <Link className='text-menu' to="/sponsor">Sponsorer</Link>
         </li>
 
       </div>
