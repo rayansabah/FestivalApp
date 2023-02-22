@@ -1,7 +1,7 @@
 import food from '../jsonTemp/food.json'
 import '../css/food.css'
 import Navbar from '../comp/NavBar'
-import Foot from '../css/menu.css'
+import Footer from '../comp/Footer'
 
 export default function Food() {
     return <div>
@@ -39,7 +39,7 @@ export default function Food() {
 
 
         ))}
-
+        <Footer />
     </div>
 
 }

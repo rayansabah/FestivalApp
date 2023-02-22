@@ -1,5 +1,6 @@
 import '../css/contact.css'
 import Navbar from '../comp/NavBar'
+import Footer from '../comp/Footer'
 
 export default function Contact() {
     return <div>
@@ -9,6 +10,7 @@ export default function Contact() {
 
             <p>ashfjasjfdkadkasjkd</p>
         </div>
+        <Footer/>
     </div >
 
 
