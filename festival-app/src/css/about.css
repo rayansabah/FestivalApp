@@ -16,3 +16,24 @@
 .about-header{
     text-align: center;
 }
+
+.sponsor-square{
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flexbox;
+    padding: 10px;
+    /* adjust this value to change the size of the box */
+    border-radius: 10px;
+    /* adjust this value to change the roundness of the corners */
+    background-color: #ffffff;
+    /* change this value to set the background color of the box */
+    width: 300px;
+    /* height: 150px;  */
+    
+}
+
+.spnsor-img{
+    width: 210;
+    height: 110;
+}

@@ -4,7 +4,7 @@ import Navbar from '../comp/NavBar'
 
 export default function Food() {
     return <div>
-            <Navbar/>
+        <Navbar />
         <div>
             {food.FoodInfo.map(food => (
                 <div className='food-square'>
@@ -17,21 +17,28 @@ export default function Food() {
                 </div>
             ))}
         </div>
+
         {food.FoodMenu.map((Food, index) => (
             <div key={index}>
                 <div className='food-square'>
+
                     <h1>{Food.name}</h1>
-                    <ul>
-                        {Food.menu.map((menu, index) => (
+
+                    {Food.menu.map((menu, index) => (
+                        <div className='text-food'>
                             <li key={index}>
                                 <p>{menu}</p>
 
                             </li>
-                        ))}
-                    </ul>
+                        </div>
+                    ))}
+
                 </div>
             </div>
+
+
         ))}
+
     </div>
 
 }
