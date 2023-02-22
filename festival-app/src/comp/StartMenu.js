@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from './logo.png';
 import '../css/menu.css'
-
+import Footer from "./Footer";
 
 function StartMenu() {
   return (
+    <>
+      <div className='menu'>
 
-    <div className='menu'>
 
-      
         <li>
           <a href="/" className="logo" >  <img src={logo} alt="logo" width={270} /></a>
         </li>
@@ -28,9 +28,10 @@ function StartMenu() {
         <li>
           <Link className='text-menu' to="/About">Om oss</Link>
         </li>
-        
-    </div>
 
+      </div>
+      <Footer/>
+    </>
   );
 }
 

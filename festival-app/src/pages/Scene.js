@@ -6,6 +6,8 @@ import Img from '../comp/ImgPopup';
 import '../css/scene.css';
 import Navbar from '../comp/NavBar';
 import Popuptext from '../comp/Popuptext.js';
+import Foot from '../css/menu.css'
+import Footer from '../comp/Footer';
 
 export default function Scene() {
   const scen1 = data.Scenes.find((scene) => scene.name === 'Scen 1');
@@ -170,8 +172,8 @@ export default function Scene() {
 
 
 
-
         </div>
+        <Footer/>
 
         {/* {data.Scenes.map((scene, index) => (
             <div key={index} className="square">

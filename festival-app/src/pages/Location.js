@@ -3,6 +3,8 @@ import 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import '../css/location.css'
 import Navbar from '../comp/NavBar'
+import Foot from '../css/menu.css'
+import Footer from '../comp/Footer'
 
 const center = [58.07814215851804, 13.020617914330508]
 const radius = 200;
@@ -45,6 +47,7 @@ export default function Location() {
 
             <p>info om områderna</p>
         </div>
+        <Footer/>
     </div>
 
 }

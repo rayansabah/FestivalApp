@@ -1,6 +1,7 @@
 import food from '../jsonTemp/food.json'
 import '../css/food.css'
 import Navbar from '../comp/NavBar'
+import Foot from '../css/menu.css'
 
 export default function Food() {
     return <div>
