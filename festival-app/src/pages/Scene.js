@@ -6,7 +6,6 @@ import Img from '../comp/ImgPopup';
 import '../css/scene.css';
 import Navbar from '../comp/NavBar';
 import Popuptext from '../comp/Popuptext.js';
-import Foot from '../css/menu.css'
 import Footer from '../comp/Footer';
 
 export default function Scene() {

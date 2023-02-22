@@ -1,6 +1,7 @@
 import '../css/sponsor.css'
 import Navbar from '../comp/NavBar'
 import SponsorData from '../jsonTemp/sponsorsInfo.json'
+import Footer from '../comp/Footer'
 
 function Sponsor() {
 
@@ -22,6 +23,7 @@ function Sponsor() {
             ))}
 
         </div>
+        <Footer/>
     </div>
 
 
