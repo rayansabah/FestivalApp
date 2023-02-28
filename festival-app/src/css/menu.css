@@ -21,3 +21,15 @@
     list-style: none;
     text-align: center;
 }
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('Montserrat-SemiBoldItalic.ttf');
+}
+
+.menu{
+    font-family: 'montserrat';
+   
+    
+}
+
