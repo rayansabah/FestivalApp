@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import StartMenu from './comp/StartMenu';
+import './css/fonts.css'
 
 import Scene from './pages/Scene';
 import Location from './pages/Location';
@@ -15,7 +16,7 @@ function App() {
         <Route exact path="/">
           <StartMenu />
         </Route>
-        <Route exact path="/sponsor">
+        <Route path="/sponsor">
           <Sponsor/>
         </Route>
         <Route path="/scene">
