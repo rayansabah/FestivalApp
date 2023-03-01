@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../assets/Montserrat-SemiBold.ttf');
+}
+
+div, li, h1, h2, p{
+    font-family: 'montserrat';
+   
+    
+}

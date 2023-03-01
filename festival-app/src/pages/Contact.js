@@ -1,4 +1,5 @@
 import '../css/contact.css'
+
 import Navbar from '../comp/NavBar'
 import Footer from '../comp/Footer'
 
