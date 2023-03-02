@@ -4,7 +4,7 @@
     align-items: center;
     height: 80px;
     padding: 0 20px;
-    background: linear-gradient(45deg, rgb(0, 153, 255) 0%, rgb(235, 21, 224) 51%, rgb(86, 2, 119)) fixed;
+    background: linear-gradient(45deg, #a28877 0%,  #e9424f) fixed;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 

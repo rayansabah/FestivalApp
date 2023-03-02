@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './logo.png';
+import logo from './logo.svg';
 import '../css/menu.css'
 import Footer from "./Footer";
 
@@ -11,7 +11,7 @@ function StartMenu() {
 
 
         <li>
-          <a href="/" className="logo" >  <img src={logo} alt="logo" width={270} /></a>
+          <a href="/" className="logo" >  <img src={logo} alt="logo"/></a>
         </li>
         <li>
           <Link className='text-menu' to="/Scene">Scener</Link>
