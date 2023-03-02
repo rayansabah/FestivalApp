@@ -11,7 +11,7 @@ function StartMenu() {
 
 
         <li>
-          <a href="/" className="logo" >  <img src={logo} alt="logo"/></a>
+          <a href="/" >  <img src={logo} alt="logo"/></a>
         </li>
         <li>
           <Link className='text-menu' to="/Scene">Scener</Link>
